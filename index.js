@@ -23,12 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // [SECTION] Cors Setup
 const corsOptions = {
-  origin: [
-    "http://localhost:4005",
-    "http://localhost:3000",
-    "http://120.28.169.95:3000",
-    "http://zuitt-bootcamp-prod-421-7218-canta.s3-website.us-east-1.amazonaws.com",
-  ],
+  origin: process.env.ORIGIN,
   credentials: true,
   optionsSuccessStatus: 200,
 };
